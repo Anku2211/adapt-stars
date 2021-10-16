@@ -1,0 +1,136 @@
+.js-heading + .pagelevelprogress__indicator {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu,
+.menu-item,
+.page,
+.article,
+.block,
+.component {
+  &__title-inner {
+    display: inline;
+    vertical-align: middle;
+  }
+}
+
+.pagelevelprogress__indicator {
+  height: 8px;
+  background-color: #daddde;
+  border: 0;
+  border-radius: 4px;
+  float: left;
+  margin: 0 !important;
+}
+
+.pagelevelprogress__indicator-inner {
+  border: 1px solid #ffffff;
+  height: 100%;
+}
+
+.pagelevelprogress__indicator-bar {
+  background-color: @white!important;
+  .transition(width @progress-duration linear);
+}
+
+// --------------------------------------------------
+// Menu
+// --------------------------------------------------
+.menu-item__progress {
+  .pagelevelprogress__indicator {
+    border-color: @menu-item-progress-border;
+  }
+
+  .pagelevelprogress__indicator-inner {
+    background-color: @menu-item-progress-inverted;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @menu-item-progress;
+  }
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Nav
+// --------------------------------------------------
+.pagelevelprogress__nav-btn {
+  padding: 18px 25px !important;
+  &::after {
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    font-size: 19px;
+  }
+  .pagelevelprogress__indicator {
+    border-color: @nav-progress-border;
+    height: 8px;
+    margin-top: 8px !important;
+    margin-right: 15px !important;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    background-color: #daddde;
+    border: 0;
+    border-radius: 4px;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @red !important;
+  }
+
+  .no-touch &:hover {
+    color: @grey2Dark !important;
+
+    .pagelevelprogress__indicator {
+      border-color: @nav-progress-border-hover;
+      .transition(border-color @duration ease-in);
+    }
+
+    .pagelevelprogress__indicator-inner {
+      background-color: @grey2 !important;
+      .transition(background-color @duration ease-in);
+    }
+
+    .pagelevelprogress__indicator-bar {
+      background-color: @grey2Dark !important;
+      .transition(background-color @duration ease-in);
+    }
+  }
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Drawer
+// --------------------------------------------------
+.pagelevelprogress__item-btn {
+  .pagelevelprogress__indicator {
+    border-color: @drawer-progress-border;
+  }
+
+  .pagelevelprogress__indicator-inner {
+    background-color: @drawer-progress-inverted;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @drawer-progress;
+  }
+
+  .no-touch &:hover {
+    .pagelevelprogress__indicator {
+      border-color: @drawer-progress-border-hover;
+      .transition(border-color @duration ease-in);
+    }
+
+    .pagelevelprogress__indicator-inner {
+      background-color: @drawer-progress-inverted-hover;
+      .transition(background-color @duration ease-in);
+    }
+
+    .pagelevelprogress__indicator-bar {
+      background-color: @drawer-progress-hover;
+      .transition(background-color @duration ease-in);
+    }
+  }
+}
+// --------------------------------------------------

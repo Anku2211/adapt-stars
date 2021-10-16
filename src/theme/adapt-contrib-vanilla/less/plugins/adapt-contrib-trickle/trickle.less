@@ -1,0 +1,62 @@
+.trickle {
+  &__inner,
+  &__btn {
+    position: static !important;
+    background: #f4f4f4;
+    border: 0 solid #f4f4f4;
+    &.btn-text {
+      padding: 0 !important;
+      margin: 0 auto !important;
+    }
+  }
+  &__inner {
+    padding: 20px 0 !important;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+  }
+  &__btn-text-inner {
+    min-width: 180px;
+    max-width: 100%;
+    width: auto;
+    height: 55px;
+    padding: 0 21px;
+    display: inline-block;
+    color: #2f2a28 !important;
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    line-height: 55px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #febd19 !important;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: background-color 400ms ease, color 400ms ease,
+      border-color 400ms ease;
+    -moz-transition: background-color 400ms ease, color 400ms ease,
+      border-color 400ms ease;
+    -ms-transition: background-color 400ms ease, color 400ms ease,
+      border-color 400ms ease;
+    transition: background-color 400ms ease, color 400ms ease,
+      border-color 400ms ease;
+
+    &:hover {
+      color: #ffffff !important;
+      background-color: #7e7772 !important;
+    }
+  }
+  &__btn-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__btn-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

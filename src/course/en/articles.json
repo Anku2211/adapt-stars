@@ -1,0 +1,21 @@
+[
+  {
+    "title": "New Article Title",
+    "displayTitle": "New Article Title",
+    "body": "",
+    "_classes": "",
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_ariaLevel": 0,
+    "_id": "616a4d88b3d5769085d09efc",
+    "_parentId": "616a4d88b3d5769085d09efb",
+    "_type": "article",
+    "_pageLevelProgress": {
+      "_isEnabled": false,
+      "_isCompletionIndicatorEnabled": false
+    }
+  }
+]

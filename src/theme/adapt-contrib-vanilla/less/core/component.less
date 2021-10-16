@@ -1,0 +1,81 @@
+.component {
+  &__body {
+    margin: 0 !important;
+    padding-top: 12px !important;
+    &.assessmentresults__body {
+      & h6 {
+        font-size: 36px;
+        line-height: 42px;
+        margin: 0;
+      }
+      & p {
+        padding-top: 15px;
+      }
+    }
+  }
+  &__instruction {
+    margin: 0 !important;
+    padding-top: 15px !important;
+  }
+  &__title {
+    margin: 0 !important;
+  }
+  width: 100%;
+  margin: 0;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  float: left !important;
+  padding-right: 14px !important;
+  padding-left: 14px !important;
+
+  &.component-solo {
+    width: 66.66% !important;
+    margin: 0 auto !important;
+  }
+  &.assessmentresults {
+    width: 50% !important;
+  }
+  &__container {
+    padding-top: 83px !important;
+    padding-bottom: 83px !important;
+  }
+  &__title {
+    margin-bottom: @component-title-margin;
+    .component-title;
+    color: @heading-color;
+  }
+
+  &__widget {
+    margin-bottom: 6px;
+    position: relative;
+    margin-top: 34px;
+    color: #2f2a28;
+    font-family: "MuseoSlab", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+
+  &__body {
+    margin-bottom: @component-body-margin;
+  }
+
+  &__instruction {
+    margin-bottom: @component-instruction-margin;
+    .instruction-text;
+  }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
+
+  @media (max-width: @device-width-medium) {
+    &.is-left {
+      padding-bottom: @block-padding-ver;
+    }
+  }
+}

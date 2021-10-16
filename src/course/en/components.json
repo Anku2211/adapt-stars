@@ -1,0 +1,122 @@
+[
+  {
+    "_component": "text",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "New Component Title",
+    "displayTitle": "New Component Title",
+    "body": "This is a text component",
+    "_id": "616a4d88b3d5769085d09efe",
+    "_parentId": "616a4d88b3d5769085d09efd",
+    "_type": "component",
+    "_layout": "full",
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    }
+  },
+  {
+    "_component": "mcq",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "New Component Title",
+    "displayTitle": "New Component Title",
+    "body": "",
+    "_id": "616a4d94b3d5769085d09f00",
+    "_parentId": "616a4d8fb3d5769085d09eff",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "instruction": "Which team won the IPL 2021 ?",
+    "_items": [
+      {
+        "text": "Royal Challengers Bangalore",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "<h1> No, you are wrong </h1>\n<p> You should brush up your knowledge </p>",
+        "_score": 0
+      },
+      {
+        "text": "Chennai Super Kings",
+        "_shouldBeSelected": true,
+        "_isPartlyCorrect": false,
+        "feedback": "<h1> Yes, you are correct </h1>\n<p> They won the trophy for the 4th time </p>",
+        "_score": 0
+      },
+      {
+        "text": "Mumbai Indians",
+        "_shouldBeSelected": false,
+        "_isPartlyCorrect": false,
+        "feedback": "<h1> No, you are wrong </h1>\n<p> You should brush up your knowledge </p>",
+        "_score": 0
+      }
+    ],
+    "_attempts": 1,
+    "_canShowModelAnswer": true,
+    "_canShowFeedback": true,
+    "_canShowMarking": true,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": false,
+    "_recordInteraction": true,
+    "_hasItemScoring": false,
+    "_questionWeight": 1,
+    "_selectable": 1,
+    "_feedback": {
+      "title": "Feedback  for the mcq",
+      "correct": "<h1> Yes, you are correct </h1>\n<p> Keep learning new things </p>",
+      "_incorrect": {
+        "final": "<h1> No, you are wrong </h1>\n<p> You should brush up your knowledge </p>",
+        "notFinal": ""
+      },
+      "_partlyCorrect": {
+        "final": "",
+        "notFinal": ""
+      }
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_reset": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "",
+      "remainingAttemptText": ""
+    },
+    "instructorNote": "",
+    "slideshowNote": "",
+    "printNote": ""
+  }
+]

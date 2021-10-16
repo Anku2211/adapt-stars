@@ -1,0 +1,125 @@
+.matching {
+  &__title {
+    color: @white !important;
+  }
+  &__item {
+    margin-bottom: @item-margin / 2;
+  }
+  &__item + &__item {
+    margin-top: 21px;
+  }
+
+  &__item-title {
+    color: #ffffff;
+    font-weight: 900;
+  }
+  &-select {
+    display: none;
+  }
+
+  &__select-container {
+    position: relative;
+
+    & .dropdown__btn[aria-expanded="true"] .dropdown__icon .icon::before {
+      content: "\f0de" !important;
+      color: #2f2a28;
+      font-size: 18px !important;
+    }
+
+    & .dropdown__btn {
+      border: 1px #daddde solid;
+      border-radius: 5px;
+      box-shadow: 0 1px 0 #daddde;
+    }
+
+    & .dropdown__icon {
+      width: 59px;
+      height: 100%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      right: 1px;
+      bottom: 1px;
+      color: #2f2a28;
+      text-align: center;
+      line-height: 59px;
+      border-left: 1px #daddde solid;
+      z-index: 1;
+      padding-top: 16px;
+      transform: translateY(-50%);
+
+      & .icon::before {
+        content: "\f0dc";
+        font-family: "FontAwesome";
+        font-size: 18px !important;
+      }
+    }
+  }
+  &__widget {
+    margin-top: @matching-widget-margin-top !important;
+  }
+  .btn__marking {
+    display: none;
+  }
+
+  &__select-state {
+    position: absolute;
+    top: 50%;
+    right: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      right: inherit;
+      left: @item-padding;
+    }
+
+    & .matching__select-correct-icon .icon::before {
+      content: "\f00c" !important;
+      height: 23px !important;
+      color: @red;
+      display: block;
+      font-family: FontAwesome !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      line-height: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transition: color 400ms ease;
+      -moz-transition: color 400ms ease;
+      -ms-transition: color 400ms ease;
+      transition: color 400ms ease;
+    }
+    & .matching__select-incorrect-icon .icon::before {
+      content: "\f00d" !important;
+      height: 23px !important;
+      color: @red;
+      display: block;
+      font-family: FontAwesome !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      line-height: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transition: color 400ms ease;
+      -moz-transition: color 400ms ease;
+      -ms-transition: color 400ms ease;
+      transition: color 400ms ease;
+    }
+  }
+
+  &__widget.is-disabled {
+    .matching__select-icon {
+      color: @disabled-inverted;
+    }
+  }
+
+  // --------------------------------------------------
+  // Error highlight
+  // --------------------------------------------------
+  &__widget:not(.is-complete)
+    .matching__select-container.has-error
+    .dropdown__btn {
+    box-shadow: 0 0 0 1px @validation-error inset;
+  }
+  // --------------------------------------------------
+}

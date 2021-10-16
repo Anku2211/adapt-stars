@@ -1,0 +1,297 @@
+// --------------------------------------------------
+// Smooths the font on the pixel level rather than the subpixel.
+// Switching from subpixel rendering to antialiasing for
+// light text on dark backgrounds makes it look lighter.
+
+@font-face {
+  font-family: "MuseoSlab";
+  src: url("fonts/museoslab-500-webfont.eot");
+  src: url("fonts/museoslab-500-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/museoslab-500-webfont.woff") format("woff"),
+    url("fonts/museoslab-500-webfont.woff2") format("woff2"),
+    url("fonts/museoslab-500-webfont.ttf") format("truetype"),
+    url("fonts/museoslab-500-webfont.svg#museoslab-500-webfont") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoSlab";
+  src: url("fonts/museoslab-500italic-webfont.eot");
+  src: url("fonts/museoslab-500italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/museoslab-500italic-webfont.woff") format("woff"),
+    url("fonts/museoslab-500italic-webfont.woff2") format("woff2"),
+    url("fonts/museoslab-500italic-webfont.ttf") format("truetype"),
+    url("fonts/museoslab-500italic-webfont.svg#museoslab-500italic-webfont")
+      format("svg");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MuseoSlab";
+  src: url("fonts/museoslab-900-webfont.eot");
+  src: url("fonts/museoslab-900-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/museoslab-900-webfont.woff") format("woff"),
+    url("fonts/museoslab-900-webfont.woff2") format("woff2"),
+    url("fonts/museoslab-900-webfont.ttf") format("truetype"),
+    url("fonts/museoslab-900-webfont.svg#museoslab-900-webfont") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoSlab";
+  src: url("fonts/museoslab-900italic-webfont.eot");
+  src: url("fonts/museoslab-900italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/museoslab-900italic-webfont.woff") format("woff"),
+    url("fonts/museoslab-900italic-webfont.woff2") format("woff2"),
+    url("fonts/museoslab-900italic-webfont.ttf") format("truetype"),
+    url("fonts/museoslab-900italic-webfont.svg#museoslab-900italic-webfont")
+      format("svg");
+  font-weight: 900;
+  font-style: italic;
+}
+// --------------------------------------------------
+.font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Globals
+// --------------------------------------------------
+body {
+  .font-smoothing;
+  font-family: @body-family;
+  font-size: @body-size;
+  font-weight: @body-weight;
+  line-height: @body-line-height;
+  color: @font-color;
+}
+
+.instruction-text() {
+  padding-top: 15px;
+  color: #2f2a28;
+  font-family: "MuseoSlab", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 900;
+}
+
+.button-text() {
+  font-family: @btn-family;
+  font-size: @btn-size;
+  font-weight: @btn-weight;
+  line-height: @btn-line-height;
+}
+
+.link-text() {
+  font-family: @link-family;
+  font-size: @link-size;
+  font-weight: @link-weight;
+  line-height: @link-line-height;
+  color: @link;
+
+  .no-touch &:hover {
+    color: @link-hover;
+    .transition(color @duration ease-in);
+  }
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Menu header
+// --------------------------------------------------
+.menu-title() {
+  font-family: @menu-title-family;
+  font-size: @menu-title-size;
+  font-weight: @menu-title-weight;
+  line-height: @menu-title-line-height;
+}
+
+.menu-subtitle() {
+  font-family: @menu-subtitle-family;
+  font-size: @menu-subtitle-size;
+  font-weight: @menu-subtitle-weight;
+  line-height: @menu-subtitle-line-height;
+}
+
+.menu-body() {
+  font-family: @menu-body-family;
+  font-size: @menu-body-size;
+  font-weight: @menu-body-weight;
+  line-height: @menu-body-line-height;
+}
+
+.menu-instruction() {
+  font-family: @menu-instruction-family;
+  font-size: @menu-instruction-size;
+  font-weight: @menu-instruction-weight;
+  line-height: @menu-instruction-line-height;
+  font-style: italic;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Menu item
+// --------------------------------------------------
+.menu-item-title() {
+  font-family: @menu-item-title-family;
+  font-size: @menu-item-title-size;
+  font-weight: @menu-item-title-weight;
+  line-height: @menu-item-title-line-height;
+}
+
+.menu-item-body() {
+  font-family: @menu-item-body-family;
+  font-size: @menu-item-body-size;
+  font-weight: @menu-item-body-weight;
+  line-height: @menu-item-body-line-height;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Page header
+// --------------------------------------------------
+.page-title() {
+  font-family: @page-title-family;
+  font-size: @page-title-size;
+  font-weight: @page-title-weight;
+  line-height: @page-title-line-height;
+}
+
+.page-subtitle() {
+  font-family: @page-subtitle-family;
+  font-size: @page-subtitle-size;
+  font-weight: @page-subtitle-weight;
+  line-height: @page-subtitle-line-height;
+}
+
+.page-body() {
+  font-family: @page-body-family;
+  font-size: @page-body-size;
+  font-weight: @page-body-weight;
+  line-height: @page-body-line-height;
+}
+
+.page-instruction() {
+  font-family: @page-instruction-family;
+  font-size: @page-instruction-size;
+  font-weight: @page-instruction-weight;
+  line-height: @page-instruction-line-height;
+  font-style: italic;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Page
+// --------------------------------------------------
+.article-title() {
+  font-family: @article-title-family;
+  font-size: @article-title-size;
+  font-weight: @article-title-weight;
+  line-height: @article-title-line-height;
+}
+
+.block-title() {
+  font-family: @block-title-family;
+  font-size: @block-title-size;
+  font-weight: @block-title-weight;
+  line-height: @block-title-line-height;
+}
+
+.component-title() {
+  font-family: "MuseoSlab", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+}
+
+.notify-title() {
+  font-family: @notify-title-family;
+  font-size: @notify-title-size;
+  font-weight: @notify-title-weight;
+  line-height: @notify-title-line-height;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Drawer
+// --------------------------------------------------
+.drawer-item-title() {
+  font-family: @drawer-item-title-family;
+  font-size: @drawer-item-title-size;
+  font-weight: @drawer-item-title-weight;
+  line-height: @drawer-item-title-line-height;
+}
+
+.drawer-item-body() {
+  font-family: @drawer-item-body-family;
+  font-size: @drawer-item-body-size;
+  font-weight: @drawer-item-body-weight;
+  line-height: @drawer-item-body-line-height;
+}
+
+.resources-filter-btn() {
+  font-family: @resources-filter-btn-family;
+  font-size: @resources-filter-btn-size;
+  font-weight: @resources-filter-btn-weight;
+  line-height: @resources-filter-btn-line-height;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Components
+// --------------------------------------------------
+.item-title() {
+  font-family: @item-title-family;
+  font-size: @item-title-size;
+  font-weight: @item-title-weight;
+  line-height: @item-title-line-height;
+}
+
+.pull-quote-title() {
+  font-size: @pull-quote-title-size;
+  font-family: @pull-quote-title-family;
+  font-weight: @pull-quote-title-weight;
+  line-height: @pull-quote-title-line-height;
+  font-style: italic;
+  color: inherit;
+}
+
+.pull-quote-body() {
+  font-size: @pull-quote-body-size;
+  font-family: @pull-quote-body-family;
+  font-weight: @pull-quote-body-weight;
+  line-height: @pull-quote-body-line-height;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Left over - to sort
+// --------------------------------------------------
+// p {
+//   // Override base.less <p> tag margin
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
+
+// html {
+// 	// preserve HTML font-size (iPhone orientation change)
+// 	-ms-text-size-adjust: 100%;
+// 	-webkit-text-size-adjust: 100%;
+// }
+
+// select {
+// 	font-family: @body-text-font-family;
+// 	font-size: @body-text-font-size;
+// 	font-weight: @body-text-font-weight;
+// 	line-height: @body-text-line-height;
+// }
+
+// button::-moz-focus-inner {
+// 	border: 0;
+// 	padding: 0;
+// }
+// --------------------------------------------------

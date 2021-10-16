@@ -1,0 +1,112 @@
+.mcq {
+  &__body {
+    margin: 0 !important;
+    padding-top: 12px !important;
+  }
+  &__instruction {
+    margin: 0 !important;
+    padding-top: 15px !important;
+  }
+  &__title {
+    margin: 0 !important;
+  }
+  &__item-label {
+    margin-bottom: @item-margin;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: @item-border-radius;
+    border: 1px #daddde solid;
+    box-shadow: 0 1px 0 #daddde;
+
+    .no-touch &:not(.is-disabled):not(.is-selected):hover,
+    html:not(.a11y-disable-focusoutline) .mcq__item-input:focus + & {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+
+    .no-touch
+      &:not(.is-disabled):not(.is-selected):not(.mcq__item-text):hover
+      .mcq__item-icon {
+      color: @red;
+      .transition(color @duration ease-in, color @duration ease-in;)
+      // .effect-scalePulse;
+    }
+  }
+
+  &__item-label.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-label.is-selected {
+    background-color: @item-color-hover;
+    color: @item-color-inverted-selected;
+  }
+  &__item.is-correct .icon {
+    color: @red;
+  }
+  .btn__marking {
+    display: none;
+  }
+
+  &__item-state {
+    position: absolute;
+    top: 50%;
+    left: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      left: inherit;
+      right: @item-padding;
+    }
+
+    & .mcq__item-answer-icon .icon {
+      ::before {
+        color: #2f2a28;
+        content: "\f10c";
+        font-family: "FontAwesome";
+        font-size: 24px !important;
+      }
+    }
+    & .mcq__item-correct-icon .icon::before {
+      content: "\f00c" !important;
+      height: 23px !important;
+      display: block;
+      font-family: FontAwesome !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      line-height: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transition: color 400ms ease;
+      -moz-transition: color 400ms ease;
+      -ms-transition: color 400ms ease;
+      transition: color 400ms ease;
+    }
+    & .mcq__item-incorrect-icon .icon::before {
+      content: "\f00d" !important;
+      height: 23px !important;
+      color: @red;
+      display: block;
+      font-family: FontAwesome !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      line-height: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transition: color 400ms ease;
+      -moz-transition: color 400ms ease;
+      -ms-transition: color 400ms ease;
+      transition: color 400ms ease;
+    }
+  }
+
+  &__item-text {
+    padding: 19px 20px 19px 60px;
+    .dir-rtl & {
+      padding-left: @item-padding;
+      padding-right: @icon-size + (@item-padding * 2);
+    }
+  }
+}

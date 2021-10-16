@@ -1,0 +1,68 @@
+.block {
+  &.b-15 {
+    background-color: #d0ebf1;
+  }
+  &.b-30 {
+    background: #f34939 !important;
+  }
+  &:before {
+    height: 5px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    content: "";
+  }
+  &.inverted {
+    background: #f34939 !important;
+    background: center scroll no-repeat;
+    background-size: cover;
+    background-image: url("../../assets/Padlock-pattern.png") !important;
+
+    & .component__title,
+    .component__body,
+    .component__instruction {
+      color: #ffffff;
+    }
+  }
+  &.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  &__inner {
+    max-width: 1024px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    // padding-right: 14px;
+    // padding-left: 14px;
+    .l-container-padding(@block-padding-ver, @block-padding-hoz);
+  }
+
+  &__title {
+    margin-bottom: @block-title-margin;
+    .block-title;
+    color: @heading-color;
+  }
+
+  &__body {
+    margin-bottom: @block-body-margin;
+  }
+
+  &__instruction {
+    margin-bottom: @block-instruction-margin;
+    .instruction-text;
+  }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
+}

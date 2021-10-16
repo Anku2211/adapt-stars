@@ -1,0 +1,18 @@
+.stars .stars-inner {
+  float: right;
+  margin-top: 12px;
+  & .icon {
+    float: left;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #f34939;
+    font-size: 24px !important;
+    &.icon-star {
+      padding-top: 7px;
+      &::before {
+        content: "\F132";
+        font-family: "FontAwesome";
+      }
+    }
+  }
+}

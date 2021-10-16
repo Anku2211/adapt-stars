@@ -1,0 +1,12 @@
+{
+  "name": "adapt-stars",
+  "version": "1.0.0",
+  "framework": ">=5",
+  "extension": "stars",
+  "displayName": "Stars Extension",
+  "description": "An extension which added and updated the shield points for every correct answer of the course",
+  "main": "/js/adapt-stars.js",
+  "keywords": ["adapt-plugin", "adapt-extension"],
+  "license": "GPL-3.0",
+  "targetAttribute": "_stars"
+}
