@@ -43,7 +43,10 @@ define(["backbone", "core/js/adapt", "./adapt-starsView"], function (
 
   function setupNavigationEvent() {
     Adapt.on("navigationView:postRender", function (navigationView) {
-      navigationView.$(".navigation-inner").append(
+      console.log(navigationView);
+      console.log(navigationView.el.lastChild);
+      navInner = navigationView.el.lastChild;
+      $(navInner).append(
         new StarsView({
           minimalUi: minimalUi,
           isExternallyUpdated: isExternallyUpdated,
@@ -52,33 +55,6 @@ define(["backbone", "core/js/adapt", "./adapt-starsView"], function (
       );
     });
   }
-  // var collection;
-  // var count = !1;
-  // function initReview() {
-  //   var stars = Adapt.course.get("_stars");
-  //   courseId = Adapt.config.get("_courseId");
-  //   console.log(stars);
-
-  //   stars &&
-  //     stars._isEnabled &&
-  //     ((collection = new Backbone.Collection(
-  //       Adapt.components.where({
-  //         _isQuestionType: !0,
-  //       })
-  //     )),
-  //     stars._minimalUi && (count = !0),
-  //     updateShieldCount());
-  // }
-  // function updateShieldCount() {
-  //   Adapt.on("navigationView:postRender", function () {
-  //     $(".navigation-inner").append(
-  //       new StarsView({
-  //         minimalUi: count,
-  //         collection: collection,
-  //       }).$el
-  //     );
-  //   });
-  // }
 
   Adapt.on("adapt:start", initReview);
 });
